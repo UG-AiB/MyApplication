@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class SecondActivity extends ActionBarActivity {
 
-    private EditText wwwView;
+    private EditText urlView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,12 @@ public class SecondActivity extends ActionBarActivity {
         String username = intentExtras.getString("username");
         TextView helloView = (TextView) findViewById(R.id.hello);
         helloView.setText("Witaj " + username + "!");
-        wwwView = (EditText) findViewById(R.id.url);
+        urlView = (EditText) findViewById(R.id.url);
 
     }
 
     public void openClicked(View view) {
-        String url = wwwView.getText().toString();
+        String url = urlView.getText().toString();
         if (!url.startsWith("http://")) {
             url = "http://" + url;
         }
